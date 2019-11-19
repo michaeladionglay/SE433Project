@@ -1,7 +1,0 @@
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\bin\Debug\practice.exe.config
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\bin\Debug\practice.exe
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\bin\Debug\practice.pdb
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\obj\Debug\SE433Proj.csprojAssemblyReference.cache
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\obj\Debug\SE433Proj.csproj.CoreCompileInputs.cache
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\obj\Debug\practice.exe
-C:\Users\mia_d\Desktop\newtonjson project\practice\practice\obj\Debug\practice.pdb
