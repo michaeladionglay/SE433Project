@@ -17,15 +17,28 @@ namespace Project_MJ
         private int DepthOfInheritance { get; set; }
         private int SourceLines { get; set; }
         private int ExecutableLines { get; set; }
-        private string output { get; set; }
+        private string Output { get; set; }
+
+        public int [] GetAll()
+        {
+            int[] allAttributes = {this.MaintainabilityIndex,
+                                    this.CyclomaticComplexity,
+                                    this.ClassCoupling,
+                                    this.DepthOfInheritance,
+                                    this.SourceLines,
+                                    this.ExecutableLines,
+                                    };
+            return allAttributes;
+        }
+
         public void RunMetrics(string Version, int num)
         {
             string metrics_dir = "C:\\Users\\mia_d\\.nuget\\packages\\microsoft.codeanalysis.metrics\\2.9.6\\Metrics\\";
 
             File.Delete("C:\\Users\\mia_d\\Desktop\\reports\\Version_" + num + ".xml");
             string input = Version + "Newtonsoft.Json.csproj";
-            this.output = "C:\\Users\\mia_d\\Desktop\\reports\\Version_" + num + ".xml";
-            Process processID = Process.Start("CMD.exe", "/C " + metrics_dir + "Metrics.exe /p:" + input + " /o:" + this.output);
+            this.Output = "C:\\Users\\mia_d\\Desktop\\reports\\Version_" + num + ".xml";
+            Process processID = Process.Start("CMD.exe", "/C " + metrics_dir + "Metrics.exe /p:" + input + " /o:" + this.Output);
 
             while (!processID.HasExited) { }
             /*
@@ -38,11 +51,11 @@ namespace Project_MJ
             */
         }
 
-        public void extractAndSetData()
+        public void ExtractAndSetData()
         {
             //"C:\\Users\\mia_d\\Desktop\\reports\\Version_" + num + ".xml"
 
-            XmlTextReader reader = new XmlTextReader(this.output);
+            XmlTextReader reader = new XmlTextReader(this.Output);
 
             //reader.MoveToContent();
             reader.ReadToDescendant("Metrics");
@@ -91,7 +104,7 @@ namespace Project_MJ
 
                    
                 }
-                
+                /*
                 if (isFull)
                 {
                     Console.WriteLine("Maintainability: " + this.MaintainabilityIndex);
@@ -102,8 +115,9 @@ namespace Project_MJ
                     Console.WriteLine("ExecutableLines: " + this.ExecutableLines);
                     break;
                 }
+                */
             }
-            Console.ReadKey();
+            //Console.ReadKey();
 
         }
 

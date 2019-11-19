@@ -16,18 +16,28 @@ namespace Project_MJ
                 beginning+"Newtonsoft.Json-2.0.4\\Src\\Newtonsoft.Json\\"
             };
 
-            Metrics[] dataList = new Metrics[25];
+            Metrics[] dataList = new Metrics[VersionList.Length];
 
             int i;
             for(i = 0; i < VersionList.Length; i++)
             {
                 Metrics Analysis = new Metrics();
                 Analysis.RunMetrics(VersionList[i], i);
-                Analysis.extractAndSetData();
+                Analysis.ExtractAndSetData();
                 dataList[i] = Analysis;
             }
 
 
+
+            Preprocessing PP = new Preprocessing(dataList);
+            int[] MI_array = PP.GetAll_MI();
+            int[] CYC_array = PP.GetAll_CYC();
+            int[] CLC_array = PP.GetAll_CLC();
+            int[] DI_array = PP.GetAll_DI();
+            int[] SL_array = PP.GetAll_SL();
+            int[] EL_array = PP.GetAll_EL();
+
+            
         }
     }
 }
