@@ -41,14 +41,6 @@ namespace Project_MJ
             Process processID = Process.Start("CMD.exe", "/C " + metrics_dir + "Metrics.exe /p:" + input + " /o:" + this.Output);
 
             while (!processID.HasExited) { }
-            /*
-            int versionCount;
-            for(versionCount = 0; versionCount < dataList.Length; versionCount++)
-            {
-                File.Delete("C:\\Users\\mia_d\\Desktop\\reports\\Version_" + versionCount + ".xml");
-                System.Diagnostics.Process.Start("CMD.exe", "/C " + metrics_dir + "Metrics.exe /p:" + dataList[versionCount] + "Newtonsoft.Json.csproj /o:C:\\Users\\mia_d\\Desktop\\reports\\Version_" + versionCount + ".xml");
-            }
-            */
         }
 
         public void ExtractAndSetData()
