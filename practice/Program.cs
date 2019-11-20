@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using 
 
 namespace Project_MJ
 {
@@ -13,9 +14,8 @@ namespace Project_MJ
             {
                 beginning+"Newtonsoft.Json-2.0.2\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-2.0.3\\Src\\Newtonsoft.Json\\",
-                beginning+"Newtonsoft.Json-2.0.4\\Src\\Newtonsoft.Json\\"
-                /*
-                beginning +"Newtonsoft.Json-3.0.1\\Src\\Newtonsoft.Json\\",
+                beginning+"Newtonsoft.Json-2.0.4\\Src\\Newtonsoft.Json\\",
+                beginning+"Newtonsoft.Json-3.0.1\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-3.5.1\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-3.5.2\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-3.5.3\\Src\\Newtonsoft.Json\\",
@@ -44,7 +44,6 @@ namespace Project_MJ
                 beginning+"Newtonsoft.Json-4.5.10\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-4.5.11\\Src\\Newtonsoft.Json\\",
                 beginning+"Newtonsoft.Json-5.0.1\\Src\\Newtonsoft.Json\\"
-                */
             };
 
             Metrics[] dataList = new Metrics[VersionList.Length];
@@ -71,7 +70,38 @@ namespace Project_MJ
             int num;
             for(num = 0; num < MI_array.Length; num++)
             {
+                Console.WriteLine("MI: ");
                 Console.WriteLine(MI_array[num]);
+            }
+
+            for (num = 0; num < CYC_array.Length; num++)
+            {
+                Console.WriteLine("CYC: ");
+                Console.WriteLine(CYC_array[num]);
+            }
+
+            for (num = 0; num < CLC_array.Length; num++)
+            {
+                Console.WriteLine("CLC: ");
+                Console.WriteLine(CLC_array[num]);
+            }
+
+            for (num = 0; num < DI_array.Length; num++)
+            {
+                Console.WriteLine("DI: ");
+                Console.WriteLine(DI_array[num]);
+            }
+
+            for (num = 0; num < SL_array.Length; num++)
+            {
+                Console.WriteLine("SL: ");
+                Console.WriteLine(SL_array[num]);
+            }
+
+            for (num = 0; num < EL_array.Length; num++)
+            {
+                Console.WriteLine("EL: ");
+                Console.WriteLine(EL_array[num]);
             }
         }
     }
