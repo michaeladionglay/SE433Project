@@ -51,6 +51,7 @@ namespace Project_MJ
 
         public int[] ArrayCreator(int metricNum)
         {
+            GeneralList = new int[numVers];
             int i;
             for (i = 0; i < numVers; i++)
             {
@@ -60,9 +61,5 @@ namespace Project_MJ
 
         }
 
-        public void CreateTextFile()
-        {
-
-        }
     }
 }

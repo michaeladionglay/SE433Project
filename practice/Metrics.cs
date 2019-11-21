@@ -99,17 +99,12 @@ namespace Project_MJ
                 /*
                 if (isFull)
                 {
-                    Console.WriteLine("Maintainability: " + this.MaintainabilityIndex);
-                    Console.WriteLine("CC: " + this.CyclomaticComplexity);
-                    Console.WriteLine("ClassCoupling: " + this.ClassCoupling);
-                    Console.WriteLine("DofI: " + this.DepthOfInheritance);
-                    Console.WriteLine("SourceLines: " + this.SourceLines);
-                    Console.WriteLine("ExecutableLines: " + this.ExecutableLines);
                     break;
                 }
                 */
+                
             }
-            //Console.ReadKey();
+          
 
         }
 
